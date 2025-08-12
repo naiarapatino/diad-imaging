@@ -1,0 +1,22 @@
+[project]
+authors = [{name = "Naiara Patiño", email = "naiarapatino@gmail.com"}]
+dependencies = []
+name = "diad-imaging"
+requires-python = ">= 3.11"
+version = "0.1.0"
+license = "MIT"
+license-files = ["LICENSE.txt"]
+
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+diad_imaging = { path = ".", editable = true }
+
+[tool.pixi.tasks]
