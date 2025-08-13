@@ -20,3 +20,6 @@ platforms = ["osx-arm64"]
 diad_imaging = { path = ".", editable = true }
 
 [tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = "3.13.*"
