@@ -1,6 +1,8 @@
 site_name: diad-imaging
+site_url: https://naiarapatino.github.io/diad-modeling
 nav:
 - Home: index.md
 - About: about.md
     
-theme: readthedocs
+theme: 
+  name: material
