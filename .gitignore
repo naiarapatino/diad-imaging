@@ -2,7 +2,7 @@
 .pixi/*
 !.pixi/config.toml
 pixi.lock
-
+.DS_Store
 
 # site
 site/
