@@ -2,7 +2,7 @@
 authors = [{name = "Naiara Patiño", email = "naiarapatino@gmail.com"}]
 dependencies = []
 name = "diad-imaging"
-requires-python = ">= 3.11"
+requires-python = ">= 3.9"
 version = "0.1.0"
 license = "MIT"
 license-files = ["LICENSE.txt"]
@@ -17,13 +17,27 @@ requires = ["hatchling"]
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]
-platforms = ["osx-arm64"]
+platforms = ["osx-64"]
 
 [tool.pixi.pypi-dependencies]
 diad_imaging = { path = ".", editable = true }
+uvplot = "*"
 
 [tool.pixi.tasks]
+casa-x86 = { cmd = "casa", depends-on = [], env = { CONDA_SUBDIR = "osx-64" } }
 
 [tool.pixi.dependencies]
-python = "3.13.*"
+python = "3.9.*"
+cython = ">=3.0.11,<4"
+ipython = ">=8.12.2,<9"
+ipykernel = ">=6.29.5,<7"
+astropy = ">=5.2.2,<6"
+pandas = ">=2.0.3,<3"
+pathlib = ">=1.0.1,<2"
+casatools = "*"
+casatasks = "*"
+
+[tool.pixi.target.osx-64.dependencies]
+galario = ">=1.2.2,<2"
+
 
