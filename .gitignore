@@ -4,6 +4,9 @@
 pixi.lock
 .DS_Store
 
+#large files
+tests/data/obs.ms
+
 # site
 site/
 
